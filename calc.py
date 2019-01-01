@@ -170,6 +170,10 @@ class Calculator():
         self.alternate_side()
 
     def calculate(self, frame):
+
+        if self.answer_flag:
+            self.left = self.answer
+
         if self.command == '':
             return
         elif self.command == '+':
