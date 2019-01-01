@@ -60,55 +60,55 @@ class Window(tk.Frame):
         button_quit.grid_anchor('se')
 
         button_add = tk.Button(self, text='+', command=lambda: self.calculator.add_command('+'))
-        button_add.grid(row=6, column=8)
+        button_add.grid(row=6, column=8, sticky='nswe')
 
         button_minus = tk.Button(self, text='-', command=lambda: self.calculator.add_command('-'))
-        button_minus.grid(row=6, column=9)
+        button_minus.grid(row=6, column=9,sticky='nswe')
 
         button_div = tk.Button(self, text='/', command=lambda: self.calculator.add_command('/'))
-        button_div.grid(row=7, column=8)
+        button_div.grid(row=7, column=8,sticky='nswe')
 
         button_mult = tk.Button(self, text='*', command=lambda: self.calculator.add_command('*'))
-        button_mult.grid(row=7, column=9)
+        button_mult.grid(row=7, column=9,sticky='nswe')
 
         button_one = tk.Button(self, text='1', command=lambda: self.update_calc_text(1))
-        button_one.grid(row=5, column=2)
+        button_one.grid(row=5, column=2,sticky='nswe')
 
         button_two = tk.Button(self, text='2', command=lambda: self.update_calc_text(2))
-        button_two.grid(row=5, column=3)
+        button_two.grid(row=5, column=3,sticky='nswe')
 
         button_three = tk.Button(self, text='3', command=lambda: self.update_calc_text(3))
-        button_three.grid(row=5, column=4)
+        button_three.grid(row=5, column=4,sticky='nswe')
 
         button_four = tk.Button(self, text='4', command=lambda: self.update_calc_text(4))
-        button_four.grid(row=6, column=2)
+        button_four.grid(row=6, column=2,sticky='nswe')
 
         button_five = tk.Button(self, text='5', command=lambda: self.update_calc_text(5))
-        button_five.grid(row=6, column=3)
+        button_five.grid(row=6, column=3,sticky='nswe')
 
         button_six = tk.Button(self, text='6', command=lambda: self.update_calc_text(6))
-        button_six.grid(row=6, column=4)
+        button_six.grid(row=6, column=4,sticky='nswe')
 
         button_sev = tk.Button(self, text='7', command=lambda: self.update_calc_text(7))
-        button_sev.grid(row=7, column=2)
+        button_sev.grid(row=7, column=2,sticky='nswe')
 
         button_eight = tk.Button(self, text='8', command=lambda: self.update_calc_text(8))
-        button_eight.grid(row=7, column=3)
+        button_eight.grid(row=7, column=3,sticky='nswe')
 
         button_nine = tk.Button(self, text='9', command=lambda: self.update_calc_text(9))
-        button_nine.grid(row=7, column=4)
+        button_nine.grid(row=7, column=4,sticky='nswe')
 
         button_zero = tk.Button(self, text='0', command=lambda: self.update_calc_text(0))
-        button_zero.grid(row=8, column=3)
+        button_zero.grid(row=8, column=3,sticky='nswe')
 
         button_dot = tk.Button(self, text='.')
-        button_dot.grid(row=8, column=2)
+        button_dot.grid(row=8, column=2,sticky='nswe')
 
         button_delete = tk.Button(self, text= 'CLR', command=lambda: self.calculator.clear(self))
-        button_delete.grid(row=8, column=4)
+        button_delete.grid(row=8, column=4,sticky='nswe')
 
         button_equals = tk.Button(self, text='=', command=lambda: self.calculator.calculate(self))
-        button_equals.grid(row=8, column=8, columnspan=2)
+        button_equals.grid(row=8, column=8, columnspan=2,sticky='nswe')
 
     def client_exit(self):
         exit()
