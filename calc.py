@@ -36,7 +36,8 @@ class Window(tk.Frame):
         self.calc_text.configure(background="#ffffcc")
 
     def update_calc_text(self, num):
-
+        if self.calculator.answer_flag:
+            self.calculator.clear(self)
         if self.calculator.state == "LEFT":
             self.calculator.update_left(num)
         elif self.calculator.state == "RIGHT":
@@ -125,6 +126,7 @@ class Calculator():
         self.answer = 0.0
         self.state = 'LEFT' # to determine which side to change
         self.command = ''
+        self.answer_flag = False
 
     def add(self):
         self.answer = self.left + self.right
@@ -147,6 +149,7 @@ class Calculator():
         self.answer = 0.0
         self.state = 'LEFT' # to determine which side to change
         self.command = ''
+        self.answer_flag = False
         frame.update_calc_text(0)
 
     def update_left(self, num):
@@ -177,7 +180,7 @@ class Calculator():
             self.div()
         else:
             self.mult()
-
+        self.answer_flag = True
         frame.display_ans()
 
 
