@@ -27,14 +27,13 @@ class Window(tk.Frame):
         self.title_text.grid(row=0, column=2)
 
     def make_calc_text(self):
-        '''init function
-        '''
+        '''init function'''
 
         self.calc_text_var = tk.StringVar()
         self.calc_text_var.set(self.calculator.left)
         self.calc_text = tk.Label(self, textvar=self.calc_text_var, font=('Helvetica', 24))
-        self.calc_text.grid(row=1, column=0, rowspan=2, columnspan=99, ipady=50)
-
+        self.calc_text.grid(row=1, column=0, rowspan=2, columnspan=99, ipady=50,ipadx=200,sticky='nsew')
+        self.calc_text.configure(background="#ffffcc")
 
     def update_calc_text(self, num):
 
