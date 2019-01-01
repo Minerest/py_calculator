@@ -1,5 +1,6 @@
 import tkinter as tk
 
+
 '''Simple calculator GUI using classes and TKINTER'''
 
 class Window(tk.Frame):
@@ -112,7 +113,6 @@ class Window(tk.Frame):
 
     def client_exit(self):
         exit()
-        sys.exit()
 
 class Calculator():
 
